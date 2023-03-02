@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.form-box {
+    background-image: url("img/house.png") ;
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: #FFD06F;
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+
+.button-box {
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+
+.toggle-btn{
+    padding: 10px 30px;
+    cursor:pointer;
+    background: transparent;
+    border:0;
+    outline:none;
+    position: relative;
+}
+
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #fad223, #FA9916);
+    border-radius: 30px;
+    transform: .5s;
+}
+
+.social-icons{
+    margin: 30px auto;
+    text-align: center;
+}
+.social-icons img{
+   width: 30px;
+   margin: 0 12px;
+   box-shadow: 0 0 20px 0#fad223 ;
+   cursor: pointer;
+   border-radius: 50%;
+}
+
+.input-group {
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom:  1px solid rgb(36, 31, 31);
+    outline: none;
+    background: transparent;
+}
+.form-control .form-label{
+    
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #fad223, #FA9916);
+    outline: none;
+    border-radius: 30px;
+}
+
+.check-box{
+    margin: 30px 10px 30px 0;
+}
+.ayo  {
+    color: rgb(36, 31, 31);
+    font-size: 12px;
+    bottom: 30px;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    background: transparent;
+    margin-top: 0px;
+   
+}
+
+.ayo .form-control  {
+
+    padding-left: 20px;
+    color:  rgb(36, 31, 31);
+    font-size: 12px;
+    bottom: 30px;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    background: transparent;
+    margin-top: 0px;
+    border: hidden;
+}
+
+
+span{
+ 
+    color:  rgb(36, 31, 31)k;
+    font-size: 12px;
+    bottom:70px;
+    position:absolute;
+    margin-top: 12px;
+}
+
+#register{
+    left: 450px;
+
+}
+#login{
+    left: 50px;
+}
