@@ -27,18 +27,16 @@
               </div>
               <ul class="nav-links">
                  <li>
-                 <i class='bx bx-search'></i>
+                 <!-- <i class='bx bx-search'></i> -->
                 <form action="search.php" method="post">
-               
-                  <span class="link-name">  
+                  <span class="link-name"> 
                     <input type="text" name="search">  
-               
-                <input type="submit" name="" value="cari">
+                   <input type="submit" name="" value="cari">
                 </span>
                 </form>
           </li>
           <li>
-              <a href="ukk_p1/home.php">
+              <a href="sipa_the_villaes/home.php">
                 <i class='bx bxs-home-alt-2 arrow'></i>  
                 <span class="link-name">Home</span>
               </a>

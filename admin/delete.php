@@ -7,7 +7,7 @@
 
 
     if($delete){
-        header('location:admin.php');
+        header('location:input.php');
     }
    
 ?>

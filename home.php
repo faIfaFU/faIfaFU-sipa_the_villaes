@@ -1,4 +1,6 @@
 <?php
+
+
 include "bot.php";
  include "config/koneksi.php";
 

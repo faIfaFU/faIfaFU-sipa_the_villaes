@@ -63,11 +63,14 @@ include '../config/koneksi.php';
           </div>
           <div class="input-group mb-3">
             <div class="custom-file">
+              <form enctype=”multipart/form-data” action="upload.php" taget="up "method="post">
               <input type="file" class="custom-file-input form-control" id="gambar" name="gambar"  value="<?php echo $gambar ?>">
-              <label class="custom-file-label" for="gambar" aria-describedby="inputGroupFileAddon02">Choose file</label>
+             
             </div>
             <div class="input-group-append">
-              <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+              <span class="input-group-text" type="submit" name="simpan" value="simpan "id="upload">Upload</span>
+            </from>
+            <iframe src="upload.php" name="up " style="width:100%; height:100%; "frameborder="0"></iframe>
             </div>
           </div>
           
