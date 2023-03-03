@@ -20,13 +20,13 @@
         <div class="social-icons">
             <img src="image.png">
          </div>
-         <form action="config/aksi_login.php" id="login"class="input-group"  method="POST">
+         <form action="config/aksi_login.php" id="login" class="input-group"  method="post">
             <input type="text" class="input-field"  name="email" placeholder="Masukan Email" required>
             <input type="text" class=" input-field" name="password" placeholder="Masukan Password" required>
             <input type="checkbox" class=" check-box"> <span>Ingat Password</span>
             <button class="submit submit-btn" name="login" type="submit">Log In</button>
         </form>
-        <form action="" id="register"class="input-group" method="POST">
+        <form action="" id="register"class="input-group" method="post">
             <input type="text" class="input-field"  name="nama" placeholder="Masukan Username" required>
             <input type="email" class=" input-field"  name="email" placeholder="Masukan email" required>
             <input type="password" class=" input-field"  name="password" placeholder="Masukan Password" required>

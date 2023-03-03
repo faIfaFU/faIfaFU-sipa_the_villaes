@@ -1,16 +1,12 @@
 <?php 
-	session_start();
-	include 'koneksi.php';
- if (isset($_POST['kirim'])) {
- 	// code...
- 
-	// menangkap data yang dikirim dari form
-	$username = $_POST['email'];
+session_start();
+include 'koneksi.php';
+ if (isset($_POST['login'])) {
+	$email = $_POST['email'];
 	$password = md5($_POST['password']);
  
 	// menyeleksi data admin dengan username dan password yang sesuai
-	$sql = "SELECT * FROM users where email='$email' and password='$password'";
-	print_r($sql);
+	$sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
 	$result = $koneksi->query($sql);
 
 	if ($result->num_rows > 0) {
@@ -19,7 +15,7 @@
   		if ($row['level'] == "admin") {
   			$_SESSION['username'] = $username;
 			$_SESSION['level'] = "admin";
-			header("location:admin/admin.php");
+			header("location:../admin/index.php");
   		}elseif ($row['level'] == "user") {
   			$_SESSION['username'] = $username;
 			$_SESSION['level'] = "user";

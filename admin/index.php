@@ -146,25 +146,22 @@
 
 
   
-        <?php
-if(isset($_GET['page'])){
-  $page = $_GET['page'];
-
-  switch ($page) {
-    case 'login':
-      include 'login.php';
-      break;
-      case 'register':
-      include 'register.php';
-      break;
-
-    default:
-      echo "halaman tidak tersedia";
-      break;
-
-  }
-} else {
-  include 'input.php';
+    <?php
+    if(isset($_GET['page'])){
+        $page = $_GET['page'];
+        switch ($page) {
+            case 'login':
+                include 'login.php';
+                break;
+            case 'villa-edit':
+                include 'villa_edit.php';
+                break;
+            default:
+                echo "halaman tidak tersedia";
+            break;
+        }
+    } else {
+        include 'villa.php';
 }
 ?>
 
