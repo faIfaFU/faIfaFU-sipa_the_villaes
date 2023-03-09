@@ -1,8 +1,3 @@
-<?php 
-include "bot.php";
-
-?>
-
 
 
 
@@ -23,11 +18,35 @@ include "bot.php";
  
 
   /* awal */
+  *{
+    margin:0;
+    padding:0 ;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+}
 
+ .navbar {
+  backgroung-color: #FFD06F;
+ }
+  .navbar-brand {
+    font-size: 30px;
+    color: ;
+    height: 25PX;
+    text-align: center;
+    font-weight:600px;
+}
+.sidebar .logo-details .logo-name {
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+   
+    font-weight: 600;
+    margin-left:0px;
+}
     .bgjb{
     background-color: #FFD06F;
     height: 65vh;
 }
+
 
 
     .background{
@@ -121,12 +140,12 @@ include "bot.php";
 
   <body>
    
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-lg  fixed-top">
   <div class="container" >
  
   
 
-    <a class="navbar-brand" href="#">   <img src="img/logo.png" alt="Bootstrap" width="30" height="24">
+     <a class="navbar-brand" href="#">  <!-- <img src="img/" alt="Bootstrap" width="30" height="24"> -->
 TheVilla</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -159,9 +178,9 @@ TheVilla</a>
             <div class="d-sm-flex align-items-center justify-content-beetwen ">
           <div class="jumbotron mt-5">
             <h1 class="display-4">Selamat Datang di TheVilla</h1>
-            <p class="lead my-4">Rekomendasi Villa Nyaman Untuk  Istirahat dan Menginap Bersama Keluarga</p>
+            <p class="lead my-4">Rekomendasi Villa Jagung dan Segitga Untuk Menghabiskan Waktu Bersama Keluarga </p>
             <hr class="my-4">
-            <p>Telah dipercaya oleh Allah .</p>
+           
             <a class="btn btn-primary " href="login.php?page=login"  role="button">Log In</a>
           </div>
           <div class="background ">
@@ -204,23 +223,8 @@ TheVilla</a>
                     </div>
                 </div>
               </div>
-              <div class="col-md">
-                <div class="card text-light">
-                    <div class="card-body text-center">
-                        <img src="img/hand.png" alt="" width="100px">
-                        <h3 class="card-title mb-3">AAA</h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </div>
-              </div>
-              <div class="col-md">
-                <div class="card text-light">
-                    <div class="card-body text-center">
-                        <img src="img/hand.png" alt="" width="100px">
-                        <h3 class="card-title mb-3">AAA</h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </div>
+             
+             
               </div>
              </div>     
          </div>

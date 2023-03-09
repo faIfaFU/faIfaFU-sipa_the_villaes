@@ -31,10 +31,6 @@
             <input type="email" class=" input-field"  name="email" placeholder="Masukan email" required>
             <input type="password" class=" input-field"  name="password" placeholder="Masukan Password" required>
            
-            
-            <!-- </div>
-              <a href="index.php?page=register" class="n-3">sudah punya akun? klik ini</a>
-            </div> -->
            
             <input type="checkbox" class=" check-box mt-5"> <span>saya setuju dengan persyaratan </span>
             <button class="submit submit-btn" name="register">Register</button>
@@ -62,10 +58,9 @@ function login(){
    </script>
 </body>
 
-<!-- 
+
 <?php
   include 'config/koneksi.php';
-
   if (isset($_POST['register'])) {
     
     $username = $_POST['username'];
@@ -73,11 +68,8 @@ function login(){
     $email = $_POST ['email'];
     $password = md5($_POST['password']);
     $level = 'user';
-
     $query = $koneksi->query("INSERT INTO users VALUES ('', '$username', '$email',
     '$password', '$level')");
-
-
     if ($query) {
       header('location:login.php?page=login');
     }
@@ -88,18 +80,13 @@ function login(){
     $email = $_POST ['email'];
     $password = md5($_POST['password']);
     $level = 'user';
-
     $query = $koneksi->query("INSERT INTO users VALUES ('','$email',
     '$password', '$level')");
-
-
     if ($query) {
       header('location:home.php?page=login');
     }
   }
 ?>
- -->
+
 
 </html>
-
-

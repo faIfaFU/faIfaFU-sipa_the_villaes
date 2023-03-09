@@ -1,5 +1,35 @@
-* {
-    margin: ;
-    padding: ;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
+
+
+.jumbotron {
+  margin-top: 90px;
+  /* background-image: url(img/jumbotron.jpeg); */
+  background-color: #FA9916;
+  max-height: 60vh;
+  border-radius: 12px 0 12px 0;
+
+}
+
+.card-title {
+  font-family: ;
+  font-weight: 600px;
+}
+
+
+.booking {
+  margin-top: -179px;
+  
+
+}
+
+.text-awal {
+  background-color: #FA9916;
+  margin-top: 15px;
+}

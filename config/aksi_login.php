@@ -19,7 +19,7 @@ include 'koneksi.php';
   		}elseif ($row['level'] == "user") {
   			$_SESSION['username'] = $username;
 			$_SESSION['level'] = "user";
-			header("location:../index.php?page=home");
+			header("location:../home.php?page=home");
   		}else{
 				header("location:location:../index.php?page=login&pesan=gagal");
   		}

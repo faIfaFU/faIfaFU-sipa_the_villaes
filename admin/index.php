@@ -1,5 +1,4 @@
 
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -27,13 +26,7 @@
               </div>
               <ul class="nav-links">
                  <li>
-                 <!-- <i class='bx bx-search'></i> -->
-                <form action="search.php" method="post">
-                  <span class="link-name"> 
-                    <input type="text" name="search">  
-                   <input type="submit" name="" value="cari">
-                </span>
-                </form>
+              
           </li>
           <li>
               <a href="sipa_the_villaes/home.php">
@@ -57,7 +50,7 @@
               <div class="icon-link">
               <a href="">
              <i class='bx bxs-calendar'></i>
-                <span class="link-name">Cal</span>
+                <span class="link-name"></span>
               </a>
              <i class='bx bx-caret-down arrow' ></i>
                </div>
@@ -71,32 +64,17 @@
               <div class="icon-link">
               <a href="">
                 <i class='bx bxs-notepad' ></i>         
-                <span class="link-name">Catatan</span>
+                <span class="link-name">Data</span>
               </a>
              <i class='bx bx-caret-down arrow' ></i>
                </div>
                 <ul class="sub-menu">
-                   <li><a class="link-name" href="">   Catatan</a></li>  
                 <li><a href="acara">Acara</a></li>
                
             </ul>
           </li>
-            <li>
-              <div class="icon-link">
-              <a href="">
-               <i class='bx bx-support'></i>     
-                <span class="link-name">Support</span>
-              </a>
-             <i class='bx bx-caret-down arrow' ></i>
-               </div>
-                <ul class="sub-menu">
-              
-                   <li> <a href="https://api.whatsapp.com/send?phone=6283107092750&text=Hi"><i class='bx bxl-whatsapp'></i></a></li>
-                <li><a href="https://www.facebook.com/azale"><i class='bx bxl-facebook-circle'></i></a></li>
-               
-            </ul>
         
-             <li>
+            <li>
               <div class="icon-link">
               <a href="">
                <i class='bx bx-cog'></i>
@@ -106,8 +84,8 @@
                </div>
                 <ul class="sub-menu">
               
-                   <li> <a href=""><i class='bx bx-toggle-left'></i></a></li>
-                    <li> <a href=""><i class='bx bxs-palette'></i></a></li>
+                   <li> <a href="">Log Out</a></li>
+                  
               
             </ul>
                 
@@ -122,16 +100,12 @@
             
             </div>
         </div> -->
-         <section class="home-section">
-            <div class="home-content">
-                <span class="text"></span>
-            </div>
-        </section>
+      
        
   </div>
-      <div class="main " >
+    <div class="main " >
           
-      
+    
         <div class="topbar fixed-top ">
             
           <div class="toggle">
@@ -140,7 +114,9 @@
           <div>
      
       </div>
-        </div>
+     </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 
