@@ -178,7 +178,7 @@ TheVilla</a>
             <div class="d-sm-flex align-items-center justify-content-beetwen ">
           <div class="jumbotron mt-5">
             <h1 class="display-4">Selamat Datang di TheVilla</h1>
-            <p class="lead my-4">Rekomendasi Villa Jagung dan Segitga Untuk Menghabiskan Waktu Bersama Keluarga </p>
+            <p class="lead my-4">Rekomendasi Villa Jagung dan Segitiga Untuk Menghabiskan Waktu Bersama Keluarga </p>
             <hr class="my-4">
            
             <a class="btn btn-primary " href="login.php?page=login"  role="button">Log In</a>

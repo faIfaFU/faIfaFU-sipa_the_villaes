@@ -6,11 +6,10 @@ if(isset($_POST["villa-add"])){
     $lokasi     = $_POST['lokasi'];
     $fasilitas  = $_POST['fasilitas'];
     $harga      = $_POST['harga'];
-    $deskripsi  = $_POST['deskripsi'];
     $jumlah_villa      = $_POST['jumlah_villa'];
     $gambar     = $_FILES['gambar']['name'];
 
-    $simpan = $koneksi->query("INSERT into villa (nama_villa,jumlah_villa,deskripsi,tipe_villa,gambar,lokasi,fasilitas,harga) values ('$nama_villa','$deskripsi','$jumlah_villa','$tipe_villa', '$gambar', '$lokasi', '$fasilitas', '$harga')");
+    $simpan = $koneksi->query("INSERT into villa (nama_villa,jumlah_villa,tipe_villa,gambar,lokasi,fasilitas,harga) values ('$nama_villa','$jumlah_villa','$tipe_villa', '$gambar', '$lokasi', '$fasilitas', '$harga')");
     if($simpan){
         move_uploaded_file($file, "img/$gambar");
         echo ("<script LANGUAGE='JavaScript'>
@@ -22,21 +21,13 @@ if(isset($_POST["villa-add"])){
 }
  ?>
  <!-- ==================== cards ==================== -->
+<br>
+<br>
+<br>
+<br>
 
-
- <?php
-            header("Content-type: application/vnd-ms-excel");
-            header("Content-Disposition: attachment;filename=Tabel Villa.xlx");
-
-?>
+ 
 <div class="container">
-<div action="search_villa.php" method="post" class=" my-5" style="justify-content: center;">
-                  <span class="link-name"> 
-                    <input type="text" name="search" style="">  
-                   <input class="btn btn-primary" type="submit" name="cari" value="cari">
-                </span>
-                </div>
-                </div>           
  <div class="mx-auto" style="width:900px ">
     <div class="card mt-5">
         <div class="card-header">
@@ -64,10 +55,6 @@ if(isset($_POST["villa-add"])){
                 <div class="mb-3">
                 <label for="lokasi" class="form-label">Lokasi</label>
                     <input type="text" class="form-control" id="lokasi"  name="lokasi" >
-                </div>
-                <div class="mb-3">
-                <label for="deskripsi" class="form-label"> Deskripsi</label>
-                    <input type="text" class="form-control" id="deskripsi" name="deskripsi" >
                 </div>
                 <div class="mb-3">
                 <label for="fasilitas" class="form-label"> Fasilitas</label>
@@ -104,7 +91,7 @@ if(isset($_POST["villa-add"])){
                         <th scope="col">Harga</th>
                         <th scope="col">Tipe Villa</th>
                         <th scope="col">Jumlah</th>
-                        <th scope="col">Deskripsi</th>
+                       
                         <th scope="col">Fasilitas</th>
                         <th th scope="col">Aksi</th>
                     </tr>
@@ -123,14 +110,19 @@ if(isset($_POST["villa-add"])){
                         <td><?php echo $data["gambar"]?></td>
                         <td><?php echo $data["harga"]?></td>
                         <td><?php echo $data["tipe_villa"]?></td>
-                        <td><?php echo $data["deskripsi"]?></td>
                         <td><?php echo $data["jumlah_villa"]?></td>
                         <td><?php echo $data["fasilitas"]?></td>
                        
                       
                         <td>
-                            <a href="villa_delete.php?kode_villa=<?php echo $data['kode_villa']?>" onClick="alert('Hello World!')">delete</a>
-                            <a href="index.php?page=villa-edit&kode_villa=<?php echo $data['kode_villa']?>">Edit</a>
+                            <div class="row"> 
+                            <div class="col-6">
+                            <a   class="btn btn-danger" href="villa_delete.php?kode_villa=<?php echo $data['kode_villa']?>" onClick="alert('Yakin Ingin Menghapus Data Ini?')">delete</a>
+                            </div>
+                            <div class="col-6">
+                            <a class="btn btn-info" href="index.php?page=villa-edit&kode_villa=<?php echo $data['kode_villa']?>" onClick="alert('Yakin Ingin Mengedit Data Ini?')">Edit</a>
+                              </div>
+                            </div>
                         </td>
                     </tr>
                 </tbody>

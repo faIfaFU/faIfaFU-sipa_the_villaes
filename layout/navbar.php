@@ -21,7 +21,7 @@
   
 
 
-<nav class="navbar navbar-expand-lg fixed-top">
+<nav class="navbar navbar-expand-lg  fixed-top">
   <div class="container" >
     <a class="navbar-brand" href="#">   <img src="img/logo.png" alt="Bootstrap" width="30" height="24">
 TheVilla</a>

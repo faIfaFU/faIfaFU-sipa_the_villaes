@@ -11,8 +11,10 @@
     left:0px;
     background: #27CAEE;
     height: 100%;
-    width: 230px;
+    width: 225px;
 }
+
+
 
 .nav-item{
     text-decoration: none;
@@ -39,16 +41,16 @@
     line-height: 50px;
 }
 .sidebar .logo-details .logo-name {
-    font-size: 25px;
-    color: rgb(255, 255, 255);
+    font-size: 30px;
+    color: white;
    
     font-weight: 600;
-    margin-left:0px;
+    margin-left: -25px;
 }
 
 
 .sidebar .nav-links{
-    color: rgb(128, 65, 65);
+    color: white;
     height: 100%;
     padding: 30px 0 128px 0;
     overflow: auto;
@@ -65,7 +67,7 @@
    
 }
 .sidebar .nav-links li:hover{
-    background:  #209fbb;
+    background:  #23B2D1;
     
 }
 
@@ -82,7 +84,7 @@
     min-width: 78px;
     text-align: center;
     line-height: 60px;
-    color: rgb(255, 255, 255);
+    color: white;
     font-size: 24px;
     
 }
@@ -97,7 +99,7 @@
    font-size: 18px;
    font-weight: 500;
    line-height: 60px;
-   color: rgb(255, 255, 255);
+   color: white;
 }
 
 .sidebar .nav-links li .bx {
@@ -117,7 +119,7 @@
 
 
 .sidebar .nav-links li .sub-menu a{
-   color: rgb(255, 255, 255);
+   color: white;
    font-size:15px;
    padding: 5px 0;
    white-space: nowrap; 
@@ -128,7 +130,7 @@
 .sidebar .nav-links li .sub-menu a:hover{
  opacity: 3;
 }
-.sidebar.open .nav-links li .sub-menu{
+.sidebar.close .nav-links li .sub-menu{
     position: absolute;
     left: 100%;
     top:-10px;
@@ -151,7 +153,7 @@
     
 }
 .sidebar.close .nav-links li .sub-menu .link-name{
-    font-size:15px;
+    font-size:18px;
     opacity: 1;
     display: block;
 }
@@ -169,7 +171,7 @@
 
 .main {
   position: absolute;
-  width: calc(100% - 125px);
+  width: calc(100% - 200px);
   left: 225px;
   min-height: 100vh;
   background: #95D2DF;
@@ -180,7 +182,6 @@
 .main.active {
     width: 100%;
     left: 0px;
-  
 }
 
 .main .topbar {
@@ -189,36 +190,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
- 
-
+  background: #27CAEE;
+  z-index: 1;
+  position: fixed;
  
 }
 
-.sidebar .nav-links li.showMenu i.arrow{
-    transform: rotate(-180deg);
-    margin-top: 15px;
-  }
-  
 /*bagian dropdiwn navbar*/
 
 .toggle {
     position: relative;
-    width: 30px;
+    width: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     cursor: pointer;
-    position: fixed;
-   padding-left: 2.5rem;
-}
-
-.main .toggle i {
-    color: rgb(255, 255, 255);
-     border-width: 1rem;
-    border-radius: 5px;
-    background: #27CAEE;
-
 }
 
 
@@ -418,6 +405,44 @@
 }
 
 
+.status.delivered {
+    padding: 2px 4px;
+    background: chartreuse;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.status.Pending {
+    padding: 2px 4px;
+    background: rgb(255, 8, 0);
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.status.Return {
+    padding: 2px 4px;
+    background: rgb(255, 187, 0);
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.status.inprogres {
+    padding: 2px 4px;
+    background: rgb(0, 81, 255);
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
 
 
 .recentcustomer {
@@ -472,9 +497,6 @@
     font-size: 14px;
     color: var(--black2);
 }
-
-
-/* search */
 
 
 
@@ -587,26 +609,4 @@
         right: 0;
         left: initial;
     }
-}
-
-
-
-/* Responsive */
-@media screen and (max-width: 500px) {
-  .input-box {
-    height: 66px;
-    margin: 0 8px;
-  }
-  .input-box i {
-    left: 12px;
-    font-size: 25px;
-  }
-  .input-box input {
-    padding: 0 112px 0 50px;
-  }
-  .input-box .button {
-    right: 12px;
-    font-size: 14px;
-    padding: 8px 18px;
-  }
 }

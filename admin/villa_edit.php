@@ -50,8 +50,8 @@
                 </div>
 
                 <div class="col-12">
-                    <input type="submit" value="Simpan" class="btn btn-primary" name="edit">
-                </div>
+                <button type="submit" name="simpan" class="btn btn-primary">Ubah</button>
+				<a href="index.php" class="btn btn-warning">Batal</a>
             </form>
          </div>
      </div>

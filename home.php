@@ -47,7 +47,7 @@ if(isset($_POST["add"])){
       <div class="card mb-3 " style="max-width: 540px;">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="img/villa1.jpg" class="img-fluid rounded-start" alt="..." style="height:100%;">
+              <img src="" class="img-fluid rounded-start" alt="..." style="height:100%;">
             </div>
             <div class="col-md-8">
               <div class="card-body">

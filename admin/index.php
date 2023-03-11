@@ -25,17 +25,12 @@
       
               </div>
               <ul class="nav-links">
-                 <li>
-              
-          </li>
+                 
           <li>
-              <a href="sipa_the_villaes/home.php">
-                <i class='bx bxs-home-alt-2 arrow'></i>  
+              <a href="../home.php">
+                <i class='bx bxs-home-alt-2'></i>  
                 <span class="link-name">Home</span>
               </a>
-              <ul class="sub-menu blank">
-                 <li><a class="link-name" href="">   Home</a></li> 
-            </ul>
           </li>
           <li>
               <a href="dashboard">
@@ -104,13 +99,29 @@
        
   </div>
     <div class="main " >
+      
+        <div class="topbar ">
           
-    
-        <div class="topbar fixed-top ">
-            
           <div class="toggle">
             <i class="fa fa-bars" aria-hidden="true"></i>
+            
           </div>
+          <ul class="nav-links">
+          <li>
+                 <nav class="navbar navbar-light pl-3 mt-2 ">
+                  <form class="form-inline" action="search_villa.php" method="post">
+                    <div class=" container row">
+                      <div class="col-8">
+                    <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search">
+                    </div>
+                    <div class="col-4">
+                    <input class="btn btn-primary" type="submit" name="search" value="search">
+                    </div>
+                    </div>
+                  </form>
+                </nav>
+          </li>
+</ul>
           <div>
      
       </div>
