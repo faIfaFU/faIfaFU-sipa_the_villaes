@@ -1,4 +1,11 @@
-
+<?php session_start() ?>
+<?php
+if ( empty($_SESSION["admin"])) {
+    echo ("<script LANGUAGE='JavaScript'>
+    window.location.href='../login.php';
+    </script>");
+} 
+?>
 <!doctype html>
 <html lang="en">
   <head>

@@ -6,12 +6,13 @@ if(isset($_POST["villa-add"])){
     $lokasi     = $_POST['lokasi'];
     $fasilitas  = $_POST['fasilitas'];
     $harga      = $_POST['harga'];
-    $jumlah_villa      = $_POST['jumlah_villa'];
+    $jumlah_villa = $_POST['jumlah_villa'];
     $gambar     = $_FILES['gambar']['name'];
+    $gambar_temp = $_FILES['gambar']['tmp_name'];
 
     $simpan = $koneksi->query("INSERT into villa (nama_villa,jumlah_villa,tipe_villa,gambar,lokasi,fasilitas,harga) values ('$nama_villa','$jumlah_villa','$tipe_villa', '$gambar', '$lokasi', '$fasilitas', '$harga')");
     if($simpan){
-        move_uploaded_file($file, "img/$gambar");
+        move_uploaded_file($gambar_temp, "../img/".$gambar);
         echo ("<script LANGUAGE='JavaScript'>
                 window.alert('data berhasil di tambahkan');
                 window.location.href='index.php';

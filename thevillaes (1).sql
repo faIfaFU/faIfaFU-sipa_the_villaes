@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 09, 2023 at 01:24 AM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 7.4.22
+-- Generation Time: Mar 11, 2023 at 10:43 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,7 +35,7 @@ CREATE TABLE `booking` (
   `kode_villa` int(11) DEFAULT NULL,
   `status_bayar` enum('sudah','belum') DEFAULT NULL,
   `total` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -47,9 +47,9 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(50) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
-  `password` varchar(20) DEFAULT NULL,
+  `password` text DEFAULT NULL,
   `level` enum('admin','user') DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
@@ -57,7 +57,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `level`) VALUES
 (1, '', 'kia12@gmail.com', '81dc9bdb52d04dc20036', 'user'),
-(2, 'admin', 'admin@gmail.com', 'admin', 'admin'),
+(2, 'admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'admin'),
 (3, '', 'bisha@gmail.com', '37851501ab813cd174b1', 'user'),
 (4, '', 'yu@gmail.com', '385d04e7683a033fcc6c', 'user');
 
@@ -77,21 +77,28 @@ CREATE TABLE `villa` (
   `harga` int(11) NOT NULL,
   `jumlah_villa` int(2) NOT NULL,
   `tipe_villa` enum('villa_jagung','vila_segitiga') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `villa`
 --
 
 INSERT INTO `villa` (`kode_villa`, `nama_villa`, `lokasi`, `gambar`, `fasilitas`, `deskripsi`, `harga`, `jumlah_villa`, `tipe_villa`) VALUES
-(11, 'Villa Jagung', 'Bogor', 'gb.png', '1 kamar tidur', '', 100, 0, ''),
-(13, 'Villa Segitiga', 'jllll', '4380899.jpg', 'wwwww', '', 2222, 0, ''),
-(18, '', '', '', '', '', 0, 0, ''),
+(11, 'Villa Jagung', 'Bogor', '', '1 kamar tidur', 'aaaaaaaaaaaaaaaaaaaaa', 100, 2147483647, 'villa_jagung'),
+(13, 'Villa Segitiga', 'Bogor', '', 'wwwww', 'aaaaaa', 2222, 1, 'villa_jagung'),
+(18, 'aaaaaaaaaaaaaaaaaaaaa', 'aaa', '', 'aaa', '', 0, 0, 'villa_jagung'),
 (19, 'Villa Jagung', 'jakut', '', 'ayoyoyo', '', 123333, 0, ''),
 (20, 'Villa Jagung', 'ssss', '', 'sss', '', 0, 0, ''),
 (21, 'aadudu', 'jateng', '', 'ddffee', '', 0, 0, ''),
 (22, 'Villa Jagung', 'jawa', '', 'aaaaaa', '', 0, 0, 'villa_jagung'),
-(23, '', '', '', '', '', 0, 0, '');
+(23, '', '', '', '', '', 0, 0, ''),
+(25, 'aaaa', 'aaaa', 'aa semaaaaarang.png', 'ssss', '', 0, 2, ''),
+(26, 'qqqqq', 'qqqq', '', 'qqq', '', 3, 3, ''),
+(27, '', '', 'aaaaaa.png', '', '', 0, 0, ''),
+(28, '', '', 'aa semarang.png', '', '', 0, 0, ''),
+(29, '', '', 'aa semaaaaarang.png', '', '', 0, 0, ''),
+(30, '', '', 'aa semaaaaarang.png', '', '', 0, 0, ''),
+(31, '', 'aaaa', 'aaaaaaaaaaaaa.png', 'ssss', '', 4, 3, '');
 
 -- --------------------------------------------------------
 
@@ -103,7 +110,7 @@ CREATE TABLE `wilayah` (
   `id_wilayah` int(11) DEFAULT NULL,
   `nama_wilayah` varchar(20) DEFAULT NULL,
   `lokasi` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables
@@ -135,7 +142,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `villa`
 --
 ALTER TABLE `villa`
-  MODIFY `kode_villa` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `kode_villa` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

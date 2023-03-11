@@ -1,3 +1,6 @@
+<?php session_start() ?>
+<?php include 'config/koneksi.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,9 +23,9 @@
         <div class="social-icons">
             <img src="image.png">
          </div>
-         <form action="config/aksi_login.php" id="login" class="input-group"  method="post">
+         <form action="" id="login" class="input-group"  method="post">
             <input type="text" class="input-field"  name="email" placeholder="Masukan Email" required>
-            <input type="text" class=" input-field" name="password" placeholder="Masukan Password" required>
+            <input type="password" class=" input-field" name="password" placeholder="Masukan Password" required>
             <input type="checkbox" class=" check-box"> <span>Ingat Password</span>
             <button class="submit submit-btn" name="login" type="submit">Log In</button>
         </form>
@@ -59,34 +62,50 @@ function login(){
 </body>
 
 
-<?php
-  include 'config/koneksi.php';
-  if (isset($_POST['register'])) {
-    
-    $username = $_POST['username'];
-   
-    $email = $_POST ['email'];
-    $password = md5($_POST['password']);
-    $level = 'user';
-    $query = $koneksi->query("INSERT INTO users VALUES ('', '$username', '$email',
-    '$password', '$level')");
-    if ($query) {
-      header('location:login.php?page=login');
-    }
-  }elseif(isset($_POST['login'])) {
-    
- 
-   
-    $email = $_POST ['email'];
-    $password = md5($_POST['password']);
-    $level = 'user';
-    $query = $koneksi->query("INSERT INTO users VALUES ('','$email',
-    '$password', '$level')");
-    if ($query) {
-      header('location:home.php?page=login');
-    }
-  }
-?>
+
 
 
 </html>
+<?php
+if ( isset($_POST['register']) ) {
+    $username = $_POST['username'];
+    $email = $_POST ['email'];
+    $password = md5($_POST['password']);
+    $level = 'user';
+    $query = $koneksi->query("INSERT INTO users VALUES ('', '$username', '$email', '$password', '$level')");
+    if ($query) {
+        header('location:login.php?page=login');
+    }
+} elseif ( isset($_POST['login']) ) {
+    $email = $_POST ['email'];
+    $password = md5($_POST['password']);
+    $query = $koneksi->query("SELECT * FROM users WHERE email='$email' AND password='$password'");
+    if ( $query->num_rows > 0 ) {
+        // output data of each row
+        while( $row = $query->fetch_assoc() ) {
+            if ( $row['level'] == "admin" ) {
+                $_SESSION["admin"] = [
+                    "id" => $row["id"],
+                    "username" => $row["username"],
+                    "email" => $row["email"],
+                    "level" => "admin"
+                ];
+                echo ("<script LANGUAGE='JavaScript'>
+                window.location.href='admin/index.php';
+                </script>");
+            } elseif ( $row['level'] == "user" ) {
+                $_SESSION["user"] = [
+                    "id" => $row["id"],
+                    "username" => $row["username"],
+                    "email" => $row["email"]
+                ];
+                header("location: resevsionis/index.php");
+            } else {
+                
+            }
+        }
+    } else {
+        
+    }
+}
+?>
